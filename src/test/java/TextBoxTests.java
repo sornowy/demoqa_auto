@@ -9,18 +9,18 @@ public class TextBoxTests {
     @BeforeAll
     static void beforeAll() {
         //Configuration.browserSize = "1920x1080";
-        //Configuration.browser = "firefox";
-        //System.setProperty("webdriver.firefox.bin", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
-        //System.setProperty("webdriver.gecko.driver", "C:\\WebDrivers\\geckodriver.exe");
+        //System.setProperty("webdriver.chromedriver", "C:\\WebDrivers\\chromedriver.exe");
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.timeout = 100;
+        //Configuration.baseUrl = "https://www.google.ru/";
+        //Configuration.timeout = 10000;
     }
 
     @Test
     void fillFormTest() {
-        open("/text-box");
+        open("https://ya.ru/");
 
         $("#userName").setValue("Timur Timur");
+        //$("#text").setValue("Timur Timur");// Проверка работоспособности кода в Яндекс поиске:)
         $("#userEmail").setValue("timur@gmail.com");
         $("#currentAddress").setValue("Some street");
         $("#permanentAddress").setValue("Another street");
